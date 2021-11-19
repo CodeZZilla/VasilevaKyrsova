@@ -5,7 +5,6 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {Container} from 'react-bootstrap';
 import {inject} from 'mobx-react';
 import styled from 'styled-components';
-import "../../../img/aviasvit1.jpg";
 
 const Item = styled.div`
 background-image: url('${props => props.imageUrl}') !important;
