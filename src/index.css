@@ -61,6 +61,11 @@ code {
   color: white !important;
   text-decoration: none;
 }
+.iframe{
+  border: 0px;
+  width: 600px;
+  height:450px;
+}
 .content {
   min-height: calc(100vh - 30px);
 }
