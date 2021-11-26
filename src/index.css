@@ -1,75 +1,114 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+h1{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+.slider h2{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.header-inner{
-  background: url("img/1.jpg");
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+.slider p{
+    font-size: 20px;
+    color: white;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
-.logo{
-  color: white;
+
+
+.header-inner {
+    background: url("military-discount-header.jpg");
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.owl-theme{
-  margin: 20px 0;
+.nav-item{
+    margin-right: 100px;
 }
-.item{
-  background: #606d4b;
+
+.logo h1 {
+    color: white;
+    font-size: 46px;
 }
+.logo img {
+    width: 300px;
+    height: 250px;
+}
+
+.owl-theme {
+    margin: 20px 0;
+}
+
+.item {
+    background: #606d4b;
+}
+
 .
 .wrapper {
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*height: 100%;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*height: 100%;*/
 }
-.images-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px 0;
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
 }
-.news-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
-  gap: 20px;
-  padding: 20px 0;
+
+.news-container {
+    display: flex;
+    flex-direction: column;
 }
-.img{
-  max-width: 450px;
+
+.img {
+    max-width: 450px;
 }
-.nav-link{
-  color: white !important;
-  text-decoration: none;
+
+.nav-link {
+    color: white !important;
+    text-decoration: none;
 }
-.iframe{
-  border: 0px;
-  width: 600px;
-  height:450px;
+
+.iframe {
+    border: 0px;
+    width: 1250px;
+    height: 450px;
 }
+
 .content {
-  min-height: calc(100vh - 30px);
+    min-height: calc(100vh - 40px);
 }
-.footer{
-  background: #5c5c5c;
-  height: 30px;
+
+.footer {
+    background: #212529;
+    height: 40px;
+}
+
+.footer h5{
+    color: white;
 }

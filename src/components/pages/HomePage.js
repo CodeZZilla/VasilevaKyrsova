@@ -6,7 +6,6 @@ function HomePage (){
     return(
         <div>
             <Slider/>
-            <News/>
         </div>
     )
 }

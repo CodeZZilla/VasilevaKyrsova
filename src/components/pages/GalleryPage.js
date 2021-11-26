@@ -1,31 +1,34 @@
 import React from "react";
-import {Container, Figure} from 'react-bootstrap';
+import {Col, Container, Figure, Row} from 'react-bootstrap';
 import {inject} from 'mobx-react';
 
 @inject('store')
-class GalleryPage extends React.Component{
+class GalleryPage extends React.Component {
     render() {
         const {getAllImages} = this.props.store;
 
-        return(
+        return (
             <Container>
                 <h1>Галерея</h1>
-                <div className="images-container">
-                    {getAllImages.map(item=>(
-                        // <Image className="img" src={item.imageUrl} fluid />
-                        <Figure key={item.id} >
-                        <Figure.Image
-                        src={item.imageUrl}
-                        />
-                        <Figure.Caption>
-                            {item.description}
-                        </Figure.Caption>
-                        </Figure>
+                <Row className="images-container justify-content-center">
+                    {getAllImages.map(item => (
+                        <Col className="col-5">
+                            <Figure key={item.id}>
+                                <Figure.Image
+                                    src={item.imageUrl}
+                                />
+                                <Figure.Caption>
+                                    {item.description}
+                                </Figure.Caption>
+                            </Figure>
+                        </Col>
+
                     ))}
-                </div>
+                </Row>
             </Container>
         )
     }
 
 }
+
 export default GalleryPage;

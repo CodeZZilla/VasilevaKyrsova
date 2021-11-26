@@ -12,7 +12,6 @@ import {BrowserRouter as Router,
     Switch,
     Route
 } from "react-router-dom";
-// import {Route,Switch} from "react-router";
 
 function Main (){
     return(

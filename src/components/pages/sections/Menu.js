@@ -1,53 +1,32 @@
 import React from "react";
-import {Container, Nav, Button} from "react-bootstrap"
-import {Link} from "react-router-dom";
+import {Container, Nav, Navbar} from "react-bootstrap";
+import {LinkContainer} from 'react-router-bootstrap'
 
 function Menu(){
     return (
-        <div className="menu">
-            <Container>
-                <Nav
-                    // activeKey="/"
-                    // onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-                >
-                    <Nav.Item>
-                        <Nav.Link>
-                            <Button variant="outline-success">
-                                <Link to="/">Головна</Link>
-                            </Button>
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link>
-                            <Button variant="outline-success">
-                                <Link to="/about">Про сайт</Link>
-                            </Button>
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link>
-                            <Button variant="outline-success">
-                                <Link to="/gallery">Галерея картинок</Link>
-                            </Button>
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link>
-                            <Button variant="outline-success">
-                                <Link to="/news">Новини</Link>
-                            </Button>
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link>
-                            <Button variant="outline-success">
-                                <Link to="/contacts">Контакти</Link>
-                            </Button>
-                        </Nav.Link>
-                    </Nav.Item>
-                </Nav>
-            </Container>
-        </div>
+            <Navbar bg="dark" expand="lg" className="mb-4">
+                <Container>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="m-1 nav-item">
+                            <LinkContainer to="/">
+                                <Nav.Link>Головна</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/news">
+                                <Nav.Link>Новини</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/gallery">
+                                <Nav.Link>Галерея картинок</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/contacts">
+                                <Nav.Link>Контакти</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/about">
+                                <Nav.Link>Про сайт</Nav.Link>
+                            </LinkContainer>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
     )
 }
 export default Menu;

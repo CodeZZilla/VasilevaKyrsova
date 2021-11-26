@@ -1,36 +1,51 @@
 import React from 'react';
-import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import {Container} from 'react-bootstrap';
-import {inject} from 'mobx-react';
-import styled from 'styled-components';
+import {Carousel, Image} from 'react-bootstrap';
 
-const Item = styled.div`
-background-image: url('${props => props.imageUrl}') !important;
-  height: 190px;
-  //width: 180px;
-`;
 
-@inject('store')
 class Slider extends React.Component {
     render() {
-        const { getAllImages } = this.props.store;
-
         return(
-            <Container>
-                <OwlCarousel className='owl-theme' loop margin={3} >
-                    {getAllImages.map(item=>(
-                        // <Item key={item.id} className='item' imageUrl={item.imageUrl}>
-                        //     {console.log(item.imageUrl)}
-                        //     <h4>1</h4>
-                        // </Item>
-                        <div>
-                            <img src={item.imageUrl}/>
-                        </div>
-                    ))}
-                </OwlCarousel>
-            </Container>
+            <div className="slider">
+                <Carousel variant="dark">
+                    <Carousel.Item>
+                        <Image
+                            className="d-block mx-auto w-50"
+                            src="images/1.jpg"
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h2>Кращі сержанти ВІТІ: хто вони? PART – 1 </h2>
+                            <p>18 листопада відзначається День сержанта Збройних Сил України....</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Image
+                            className="d-block mx-auto w-50"
+                            src="images/2.jpg"
+                            alt="First slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h2>День сержанта</h2>
+                            <p>Керівництво факультетів привітали сержантів з їхнім професійним святом.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Image
+                            className="d-block mx-auto w-50"
+                            src="images/3.jpg"
+                            alt="First slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h2>Гості у факультету №2 </h2>
+                            <p>11 листопада на факультеті №2 ВІТІ відбулася зустріч з полковником Потєхіним</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
         )
     }
 }

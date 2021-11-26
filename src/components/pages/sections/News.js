@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Container} from 'react-bootstrap';
+import {Card, Col, Container, Row} from 'react-bootstrap';
 import {inject} from "mobx-react";
 
 
@@ -9,20 +9,23 @@ class News extends React.Component {
         const { getAllNews } = this.props.store;
 
         return(
-            <Container>
+            <Container className="align-items-center">
                 <h1>Новини</h1>
-                <div className="news-container">
-                    {getAllNews.map(item=>(
-                        <Card key={item.id} style={{ maxWidth: '30rem' }}>
-                            <Card.Header as="h5">{item.title}</Card.Header>
-                            <Card.Body>
-                                <Card.Text>
-                                    {item.description}
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                <Row xs={1} md={2} className="g-4">
+                    {getAllNews.map((item, idx) => (
+                        <Col>
+                            <Card>
+                                <Card.Img variant="top" src={item.image} />
+                                <Card.Body>
+                                    <Card.Title>{item.title}</Card.Title>
+                                    <Card.Text>
+                                        {item.description}
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
                     ))}
-                </div>
+                </Row>
             </Container>
         )
     }

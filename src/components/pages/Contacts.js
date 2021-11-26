@@ -9,13 +9,14 @@ function Contacts (){
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Номер телефону</Accordion.Header>
                     <Accordion.Body>
-                        +380974303838
+                        Міський : 256-22-09
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>Веб-сайт</Accordion.Header>
                     <Accordion.Body>
-                        <a href="google.com">google.com</a>
+                        <a href="http://www.viti.edu.ua/">Військовий інститут телекомунікацій та інформатизації
+                            імені Героїв Крут</a>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
@@ -27,7 +28,6 @@ function Contacts (){
                             allowFullScreen=""
                             loading="lazy"
                         >
-
                         </iframe>
                     </Accordion.Body>
                 </Accordion.Item>
